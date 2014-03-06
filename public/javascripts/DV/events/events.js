@@ -81,6 +81,14 @@ DV.Schema.events = {
       }
 
       if(afterLoad) afterLoad.call(me.helpers);
+
+      // added annotator, now we must obtain
+//      var pageAnnotator = $('.DV-textContents').annotator()
+      var pageAnnotator = new Annotator($('.DV-textContents'));
+      pageAnnotator.addPlugin('Store', {
+        prefix: me.models.pages.entitiesURL(me.models.document.currentPageIndex)
+      });
+
     };
 
     if (me.viewer.schema.text[pageIndex]) {
@@ -97,6 +105,8 @@ DV.Schema.events = {
     var crossDomain = this.helpers.isCrossDomain(textURI);
     if (crossDomain) textURI += '?callback=?';
     DV.jQuery[crossDomain ? 'getJSON' : 'get'](textURI, {}, handleResponse);
+
+
   },
 
   resetTracker: function(){

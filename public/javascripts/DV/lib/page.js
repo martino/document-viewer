@@ -73,6 +73,7 @@ DV.Page.prototype.draw = function(argHash) {
     this.imgSource = source;
     this.loadImage();
   }
+//  this.entitiesEndpoint = this.model_pages.entitiesURL(this.index);
   this.sizeImage();
   this.position();
 

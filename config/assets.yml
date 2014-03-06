@@ -1,6 +1,7 @@
 embed_images: datauri
 template_function: _.template
-# compress_assets: off
+compress_assets: off
+gzip_assets: off
 
 javascripts:
   viewer:
@@ -21,6 +22,19 @@ javascripts:
     - public/javascripts/DV/helpers/*.js
     - public/javascripts/DV/states/*.js
     - public/javascripts/DV/controllers/*.js
+    - public/annotator/vendor/jquery.js
+    - public/annotator/js/util.js
+    - public/annotator/js/console.js
+    - public/annotator/js/class.js
+    - public/annotator/js/range.js
+    - public/annotator/js/annotator.js
+    - public/annotator/js/widget.js
+    - public/annotator/js/editor.js
+    - public/annotator/js/viewer.js
+    - public/annotator/js/notification.js
+    - public/annotator/js/xpath.js
+    - public/annotator/js/plugin/store.js
+    - public/javascripts/DV/views/*.jst
 
   templates:
     - public/javascripts/DV/views/*.jst
@@ -32,6 +46,8 @@ stylesheets:
     - public/stylesheets/DV/components/ui.css
     - public/stylesheets/DV/components/*.css
     - public/stylesheets/DV/themes/plain.css
+    - public/annotator/css/annotator.min.css
+    - public/stylesheets/annotator_fix.css
 
   print:
     - public/stylesheets/DV/print.css

@@ -49,6 +49,13 @@ DV.model.Pages.prototype = {
     return url;
   },
 
+  entitiesURL: function(index) {
+      var pageID = _.findWhere(this.viewer.schema.document.resources.page.entities, {'page_number': index + 1}).page_id
+        , url = '/api/pages/' + pageID;
+
+      return url;
+  },
+
   zeroPad : function(num, count) {
     var string = num.toString();
     while (string.length < count) string = '0' + string;

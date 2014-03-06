@@ -32,10 +32,14 @@
 </div>
 
 <script src="public/assets/viewer.js" type="text/javascript" charset="utf-8"></script>
-<script src="public/assets/templates.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="public/assets/templates.js" type="text/javascript" charset="utf-8"></script>-->
 
 <script type="text/javascript">
-  DV.load('http://documents.nytimes.com/goldman-sachs-internal-emails.json', { container: '#DV-container' });
+//  DV.load('http://documents.nytimes.com/goldman-sachs-internal-emails.json', { container: '#DV-container' });
+window.currentDocument = DV.load("https://dev.dcloud.org/documents/17-test-pdf-a.js", {
+    container: "#DV-container"
+//        container: "#DV-viewer-17-test-pdf-a"
+});
 </script>
 
 </body>
