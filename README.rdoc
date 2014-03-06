@@ -98,6 +98,14 @@ We're using the excellent Jammit asset compression library from the DocumentClou
 
 Details on installing and using the Jammit library can be found at http://documentcloud.github.com/jammit/
 
+=== OKFN annotator
+
+OKFN Annotator is an inline annotation for the web in pure Javascript. You can found at https://github.com/okfn/annotator .
+
+All requirement files are imported into 
+  
+  /public/annotator
+
 
 == Styling the Viewer
 The template provided comes in two forms:
